@@ -23,3 +23,12 @@ const { db, printProducts } = products(await getProducts())
 
 /* Cart */
 cart(db, printProducts)
+
+/* Dark mode */
+
+const bdark = document.querySelector('#bdark');
+const body = document.querySelector('body');
+
+    bdark.addEventListener('click', e => {
+      body.classList.toggle('darkmode');
+    });

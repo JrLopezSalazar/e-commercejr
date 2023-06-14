@@ -384,7 +384,41 @@ button {
   grid-column:  span 3;
 }
 
+.slider{
+  width: 100%;
+  margin: auto;
+  height: 900px;
+  
+  animation: slider 20s infinite alternate;
+}
+
+/*.slider ul{
+  padding: 0;
+  display: flex;
+  width: 200%;
+}
+.slider li img{
+  width: 100%;
+}
+
+@keyframes slider{
+  0%{margin-left: 0;}
+  20%{margin-left: 0;}
+
+  50%{margin-left: -100%;}
+  100%{margin-left: -100%;}
+}
+
+
+
 /* ======= FOOTER ======== */
+
+body.darkmode{
+  background-color: rgb(32, 32, 44);
+  color: white;
+}
+
+
 .footer {
   background-color: var(--card-color);
 }
