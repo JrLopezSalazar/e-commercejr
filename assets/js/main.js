@@ -32,3 +32,22 @@ const body = document.querySelector('body');
     bdark.addEventListener('click', e => {
       body.classList.toggle('darkmode');
     });
+
+
+
+/*  BOTON DESCUENTO */    
+
+const openBoton = document.querySelector('.boton-descuento');
+const modalDescuento = document.querySelector('.modal-cupon');
+const modalClose = document.querySelector('.modal-close');
+
+openBoton.addEventListener('click', (e) => {
+    e.preventDefault();
+    modalDescuento.classList.add('modal-descuento--show');
+
+});
+
+modalClose.addEventListener('click', (e) => {
+    e.preventDefault();
+    modalDescuento.classList.remove('modal-descuento--show');
+});

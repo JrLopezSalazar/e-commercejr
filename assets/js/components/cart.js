@@ -60,15 +60,31 @@ function cart(db, printProducts) {
 
   function addToCart(id, qty = 1) {
 
-    const itemFinded = cart.find(i => i.id === id)
+    const itemFinded = db.find(i => i.id === id)
+    if(itemFinded && itemFinded.quantity > 0){
+      const item = cart.find(item => item.id === id)
 
-    if (itemFinded) {
-
-      itemFinded.qty += qty
-    } else {
-      cart.push({id, qty})
+      if (item) {
+        if(checkStock (id, qty + item.qty)){
+          item.qty++
+        } else{
+          window.alert('No hay stock disponible')
+        }
+        
+      } else {
+        cart.push({id, qty})
+      }
+      
     }
     printCart()
+    
+  }
+
+  function checkStock(id, qty){
+
+    const product = db.find(product => product.id === id)
+    return product.quantity - qty >= 0
+
   }
 
   function removeFromCart(id, qty = 1) {
@@ -109,15 +125,22 @@ function cart(db, printProducts) {
   }
 
   function checkout() {
-    for (const item of cart) {
-      const productFinded = db.find(p => p.id === item.id)
-      productFinded.quantity -= item.qty
-    }
 
-    cart = []
-    printCart()
-    printProducts()
-    window.alert('Gracias por su compra')
+    if (cart.length === 0) {
+      window.alert('No hay articulos en el carrito')
+    } else {
+        for (const item of cart) {
+        const productFinded = db.find(p => p.id === item.id)
+        productFinded.quantity -= item.qty
+        }
+
+      cart = []
+      printCart()
+      printProducts()
+      window.alert('Gracias por su compra')
+
+    }
+    
   }
 
   printCart()
