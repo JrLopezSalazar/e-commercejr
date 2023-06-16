@@ -954,6 +954,7 @@ body.darkmode{
   }
 }
 
+/* INICIO--- MODAL PARA ANUNCIAR CUPON DE DESCUENTO*/
 
 .modal-cupon{
   position: fixed;
@@ -966,6 +967,15 @@ body.darkmode{
   z-index: 4;
   opacity: 0;
   pointer-events: none;
+
+
+  /*animation: modal 2s 3s;
+  animation-fill-mode: forwards;
+  animation-delay: 3s;
+  visibility: hidden;*/
+  
+
+  
   
 }
 
@@ -989,8 +999,33 @@ body.darkmode{
   gap: 1em;
   place-items: center;
   grid-auto-columns: 100%;
+  
 
+
+  
 }
+
+/*prueba de popUp*/
+
+@keyframes modal{
+  100%{
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .modal-title{
   font-size: 2.5rem;
@@ -1005,6 +1040,14 @@ body.darkmode{
   border: 1px solid;
   border-radius: 8px;
   display: inline-block;
+
+
+/*prueba de popUp*/
+
+  
+
+
+
 }
 
 .modal-close:hover{
@@ -1012,29 +1055,39 @@ body.darkmode{
   color: var(--primary-color);
   background-color: #fff;
 }
+
+/* FIN --- MODAL PARA ANUNCIAR CUPON DE DESCUENTO*/
+
+
+
+
 .boton-descuento{
   height: 60px;
   width: 60px;
   border-radius: 60px;
-  background-color: royalblue;
+  background-color: var(--primary-color);
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
   background-size: 50px;
   background-position: center;
   background-repeat: no-repeat;
   position: fixed;
-  bottom: 30px;
-  right: 30px;
+  bottom: 65px;
+  right: 85%;
   z-index: 10;
+}
+.boton-descuento button{
+  font-family: 'Courier New', Courier, monospace;
+  
+  
+
 }
 
 
-/*.slider{
+.slider{
   padding: 100px 0 0 0;
   width: 100%;
   height: auto;
-  margin: auto;
-  
-  
+  margin: auto; 
   animation: slider 20s infinite alternate;
 }
 
@@ -1055,3 +1108,26 @@ body.darkmode{
   50%{margin-left: -100%;}
   100%{margin-left: -100%;}
 }
+
+
+header button{
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  padding: 10px;
+  font-family: var(--title-font);
+  border: none;
+  background-color: transparent;
+
+}
+
+header button:hover {
+  background-color: black;
+  color: white;
+}
+
+
+
+
+
+

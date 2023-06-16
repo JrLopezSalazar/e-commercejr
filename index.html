@@ -16,11 +16,13 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <!-- JS -->
   <script src="assets/js/main.js" type="module" defer></script>
+
+  
 </head>
 <body>
   <div class="boton-descuento">
     <button id="open">
-        30% DSCT
+        30% DCTO
     </button>
   </div>
   <section class="modal-cupon">
@@ -55,11 +57,10 @@
   <!-- Header --> 
 
   <header class="header">
-    <div>
-      <button id="bdark">Modo oscuro </button>
-    </div>
-    
+
+
     <nav class="nav container">
+
       <a href="/" class="nav__logo">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48.92 56.48" class="logo--icon">
           <path fill="currentColor"
@@ -67,16 +68,23 @@
           </path>
         </svg>    
       </a>
+      
       <div class="nav__menu">
         <button type="button" class="nav__btn btn--close">
           <i class='bx bx-x'></i>
         </button>
         <ul class="nav__list">
           <li class="nav__items">
-            <a href="#" class="nav__link">Inicio</a>
+            <a href="#" class="nav__link">
+              
+              <p class="color_inicio">Inicio</p>
+            </a>
           </li>
           <li class="nav__items">
-            <a href="#" class="nav__link">Productos</a>
+            <a href="#" class="nav__link">
+              
+              <p class="color_productos">Productos</p>
+            </a>
           </li>
         </ul>
       </div>
@@ -88,8 +96,29 @@
         <button type="button" class="nav__btn btn--menu">
           <i class='bx bx-grid-alt'></i>
         </button>
+        <!-- BOTON DE DARK MODE -->
+        <button class="switch" id="switch">
+          <span>
+            <i class="fa-solid fa-sun"></i>
+          </span>
+          <span><i class="fa-solid fa-moon"></i></span>
+        </button>
+        <button id="bdark">Modo oscuro </button>
       </div>
     </nav>
+
+
+    
+  
+    
+    
+
+          
+        
+    </nav>
+
+    
+
     
   </header>
 
@@ -102,45 +131,7 @@
     </section>
   </main>
 
-
-  <div class="modal" style="animation: 300ms ease 0s 1 normal none running fade-in;">
-    <div class="modal__overlay"></div>
-    <div class="modal__container">
-      <div class="modal__image">
-        <img src="https://res.cloudinary.com/duu1imwxs/image/upload/v1677270464/eCommerce/shirt2_av4jld.png" alt="Camiseta de manga larga con estampado gráfico">
-  
-        <button type="button" class="modal__btn modal--close">
-          <i class="uil uil-times"></i>
-        </button>
-  
-        
-  
-        <button class="modal__btn modal--add" data-id="2">
-          <i class="uil uil-shopping-cart"></i> Agregar al carrito
-        </button>
-      </div>
-      <div class="modal__content">
-        <div class="modal__head">
-          <h2 class="modal__title">Camiseta de manga larga con estampado gráfico</h2>
-          <span class="modal__sku">SKU: SUDAMLOU232</span>
-          <span class="modal__price">$15</span>
-        </div>
-        <div class="modal__details">
-          <p class="modal__description">Perfecta para un look casual, esta camiseta de manga larga presenta un estampado gráfico llamativo en el pecho. Su ajuste regular y suave tejido de algodón la hacen cómoda y fácil de usar.</p>
-          <span class="modal__category">shirt</span>
-          <span class="modal__stock">Disponibles: 3</span>
-        </div>
-      </div>
-    </div>
-    </div>
-    <div class="modal__overlay"></div>
-
     
-  
-        
-  
-       
-  
 
   <!-- Cart -->
   <div class="cart">
